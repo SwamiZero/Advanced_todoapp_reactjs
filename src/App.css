@@ -1,38 +1,160 @@
 .App {
   text-align: center;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  width: 70vw;
+  height: 90vh;
+  background: #276c91;
+  border-radius: 10px;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.8);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.title {
+  color: aliceblue;
+  font-weight: 700;
+  font-size: 30px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.title::after {
+  content: ' ';
+  width: 180px;
+  height: 2px;
+  background-color: #fff;
+  display: block;
+  margin: auto;
+}
+
+.container .form_todo {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+}
+
+.container .form_todo .form-control {
+  width: 87%;
+  height: 15px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.container .form_todo .btn {
+  width: 10%;
+  height: 35px;
+  border-radius: 5px;
+  padding: 5px;
+  border: 1px solid #fff;
+  color: #fff;
+  background: transparent;
+  font-size: 14px;
+  cursor: pointer;
+}
+.container .form_todo .btn:hover {
+  background: #ffffff;
+  color: #276c91;
+}
+
+.todos_wrapper {
+  align-items: flex-start;
+  justify-content: space-around;
+  margin-top: 20px;
+  display: flex;
+}
+
+.todos_title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.todos_title::after {
+  display: block;
+  content: "";
+  width: 120px;
+  height: 2px;
+  background: #ffcb0d;
+  margin: auto;
+}
+
+.todos_list {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 31%;
+  border-radius: 5px;
+  height: 68vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.todo_card {
+  width: 100%;
+  background: #fff;
+  color: #276c91;
+  height: auto;
+  margin-top: 3px;
+  border-radius: 5px;
+  padding: 2px 5px;
+  margin-right: 6px;
+}
+
+.card_text {
+  margin: auto;
+}
+
+.icon-check-todo {
+  padding: 5px;
+  font-size: 12px;
+  background: #45ff1b;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.icon-trash-todo {
+  background-color: rgb(255, 58, 58);
+  color: #fff;
+  padding: 5px;
+  font-size: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.progress_card {
+  width: 100%;
+  background: #ffd417;
+  color: #000000;
+  height: auto;
+  margin-top: 3px;
+  border-radius: 5px;
+  padding: 2px 5px;
+  margin-right: 3px;
+}
+.icon-progress-todo {
+  font-size: 12px;
+  padding: 5px;
+  background: white;
+  color: green;
+  margin-top: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.completed_card {
+  width: 100%;
+  height: auto;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  background: #00761a;
+  border-radius: 5px;
+  padding: 10px 5px;
+  margin-top: 3px;
 }
